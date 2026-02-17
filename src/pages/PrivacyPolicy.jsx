@@ -128,9 +128,9 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact us:
               </p>
               <ul className="mt-3 space-y-1">
-                <li><strong>Email:</strong> <a href="mailto:info@macclesfieldbodywork.co.uk" className="text-electric hover:underline">info@macclesfieldbodywork.co.uk</a></li>
-                <li><strong>Phone:</strong> 01625 000 000</li>
-                <li><strong>Address:</strong> Macclesfield, Cheshire, United Kingdom</li>
+                <li><strong>Email:</strong> <a href="mailto:cars@maccgarage.com" className="text-electric hover:underline">cars@maccgarage.com</a></li>
+                <li><strong>Phone:</strong> 07307 353 951</li>
+                <li><strong>Address:</strong> Unit 4, Melville Road, Macclesfield, SK10 2BN</li>
               </ul>
               <p className="mt-3">
                 You also have the right to lodge a complaint with the Information Commissioner's Office (ICO) at{' '}

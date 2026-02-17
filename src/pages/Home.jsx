@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import {
-  Wrench, CarFront, Paintbrush, SprayCan, CircleDot, Palette,
+  Wrench, CarFront, Paintbrush, SprayCan, CircleDot, Palette, Flame,
   ArrowRight, Star, Shield, Clock, CheckCircle2, ChevronRight,
-  Camera
 } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import SectionHeading from '../components/SectionHeading';
@@ -45,6 +44,12 @@ const services = [
     description: 'Custom colours and factory finishes for a showroom-quality look.',
     path: '/services/alloy-wheel-resprays',
   },
+  {
+    icon: Flame,
+    title: 'Vehicle Welding',
+    description: 'MOT failure welding, car restoration, van welding and fabrication. 15+ years experience.',
+    path: '/services/welding',
+  },
 ];
 
 const steps = [
@@ -55,7 +60,7 @@ const steps = [
 
 const stats = [
   { value: '15+', label: 'Years Experience' },
-  { value: '5,000+', label: 'Cars Repaired' },
+  { value: '1,000+', label: 'Cars Repaired' },
   { value: '100%', label: 'Satisfaction Rate' },
   { value: '24h', label: 'Quote Turnaround' },
 ];
@@ -82,33 +87,43 @@ export default function Home() {
         <div className="absolute top-20 right-0 w-96 h-96 bg-cyan/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple/10 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-600 mb-6 shadow-sm animate-fade-in-up">
-              <Shield size={16} className="text-electric" />
-              Insurance Approved Repairs
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm text-gray-600 mb-6 shadow-sm animate-fade-in-up">
+                <Shield size={16} className="text-electric" />
+                Insurance Approved Repairs
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up animate-delay-100">
+                Expert Car Body Repairs in{' '}
+                <span className="gradient-text">Macclesfield</span>
+              </h1>
+              <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-2xl animate-fade-in-up animate-delay-200">
+                Quality craftsmanship for accident damage, paintwork, welding, and alloy restoration.
+                Trusted by drivers across Cheshire.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
+                <Link
+                  to="/contact"
+                  className="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-center hover:opacity-90 transition-opacity shadow-lg shadow-electric/25 inline-flex items-center justify-center gap-2"
+                >
+                  Get a Free Quote <ArrowRight size={18} />
+                </Link>
+                <Link
+                  to="/about"
+                  className="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold text-center hover:border-electric hover:text-electric transition-colors inline-flex items-center justify-center gap-2"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6 animate-fade-in-up animate-delay-100">
-              Expert Car Body Repairs in{' '}
-              <span className="gradient-text">Macclesfield</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-2xl animate-fade-in-up animate-delay-200">
-              Quality craftsmanship for accident damage, paintwork, and alloy restoration.
-              Trusted by thousands of drivers across Cheshire.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
-              <Link
-                to="/contact"
-                className="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-center hover:opacity-90 transition-opacity shadow-lg shadow-electric/25 inline-flex items-center justify-center gap-2"
-              >
-                Get a Free Quote <ArrowRight size={18} />
-              </Link>
-              <Link
-                to="/about"
-                className="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold text-center hover:border-electric hover:text-electric transition-colors inline-flex items-center justify-center gap-2"
-              >
-                Learn More
-              </Link>
+            <div className="hidden lg:grid grid-cols-2 gap-4">
+              <div className="rounded-2xl overflow-hidden aspect-[3/4]">
+                <img src="/images/painting-red-2.jpeg" alt="Professional spray painting Macclesfield" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-2xl overflow-hidden aspect-[3/4] mt-10">
+                <img src="/images/bmw-prep.jpeg" alt="Car bodywork repairs Macclesfield" className="w-full h-full object-cover" />
+              </div>
             </div>
           </div>
         </div>
@@ -227,17 +242,23 @@ export default function Home() {
             description="See the quality of our workmanship for yourself. Every repair is finished to the highest standard."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <AnimatedSection key={item} delay={item * 80}>
+            {[
+              { src: '/images/porsche-after.jpeg', label: 'Bodywork Respray — Finished Result' },
+              { src: '/images/spray-prep.jpeg', label: 'Full Car Spray — Panel Prep' },
+              { src: '/images/bmw-prep.jpeg', label: 'BMW Full Respray — Masked & Ready' },
+              { src: '/images/alloy-respray.jpeg', label: 'Alloy Wheel Respray — Silver Finish' },
+              { src: '/images/painting-red-1.jpeg', label: 'Professional Spray Booth — Red Respray' },
+              { src: '/images/door-damage.jpeg', label: 'Panel Damage — Before Repair' },
+            ].map((item, i) => (
+              <AnimatedSection key={item.src} delay={i * 80}>
                 <div className="group relative aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan/20 to-purple/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <Camera size={32} className="text-gray-400 mx-auto mb-2" />
-                      <p className="text-sm text-gray-500 font-medium">Before & After #{item}</p>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span className="text-white font-semibold">View Details</span>
+                  <img
+                    src={item.src}
+                    alt={item.label}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                    <span className="text-white text-sm font-medium">{item.label}</span>
                   </div>
                 </div>
               </AnimatedSection>

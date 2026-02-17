@@ -21,19 +21,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    lines: ['Macclesfield, Cheshire', 'United Kingdom'],
+    lines: ['Unit 4, Melville Road', 'Macclesfield, SK10 2BN'],
   },
   {
     icon: Phone,
     title: 'Call Us',
-    lines: ['01625 000 000'],
-    href: 'tel:01625000000',
+    lines: ['07307 353 951'],
+    href: 'tel:07307353951',
   },
   {
     icon: Mail,
     title: 'Email Us',
-    lines: ['info@macclesfieldbodywork.co.uk'],
-    href: 'mailto:info@macclesfieldbodywork.co.uk',
+    lines: ['cars@maccgarage.com'],
+    href: 'mailto:cars@maccgarage.com',
   },
   {
     icon: Clock,

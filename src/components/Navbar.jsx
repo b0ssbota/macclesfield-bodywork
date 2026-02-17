@@ -9,6 +9,7 @@ const services = [
   { name: 'Spray Painting', path: '/services/spray-painting' },
   { name: 'Alloy Wheel Repairs', path: '/services/alloy-wheel-repairs' },
   { name: 'Alloy Wheel Resprays', path: '/services/alloy-wheel-resprays' },
+  { name: 'Vehicle Welding', path: '/services/welding' },
 ];
 
 export default function Navbar() {

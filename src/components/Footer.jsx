@@ -35,6 +35,7 @@ export default function Footer() {
               <li><Link to="/services/spray-painting" className="hover:text-cyan transition-colors">Spray Painting</Link></li>
               <li><Link to="/services/alloy-wheel-repairs" className="hover:text-cyan transition-colors">Alloy Wheel Repairs</Link></li>
               <li><Link to="/services/alloy-wheel-resprays" className="hover:text-cyan transition-colors">Alloy Wheel Resprays</Link></li>
+              <li><Link to="/services/welding" className="hover:text-cyan transition-colors">Vehicle Welding</Link></li>
             </ul>
           </div>
 
@@ -56,15 +57,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-cyan mt-0.5 shrink-0" />
-                <span>Macclesfield, Cheshire, United Kingdom</span>
+                <span>Unit 4, Melville Road, Macclesfield, SK10 2BN</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-cyan shrink-0" />
-                <a href="tel:01onal" className="hover:text-cyan transition-colors">01625 000 000</a>
+                <a href="tel:07307353951" className="hover:text-cyan transition-colors">07307 353 951</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-cyan shrink-0" />
-                <a href="mailto:info@macclesfieldBodywork.co.uk" className="hover:text-cyan transition-colors">info@macclesfieldbodywork.co.uk</a>
+                <a href="mailto:cars@maccgarage.com" className="hover:text-cyan transition-colors">cars@maccgarage.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={16} className="text-cyan mt-0.5 shrink-0" />

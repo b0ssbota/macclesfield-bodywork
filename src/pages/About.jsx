@@ -201,10 +201,10 @@ export default function About() {
                 Get a Free Quote <ArrowRight size={18} />
               </Link>
               <a
-                href="tel:01625000000"
+                href="tel:07307353951"
                 className="border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-full font-semibold hover:border-electric hover:text-electric transition-colors inline-flex items-center justify-center gap-2"
               >
-                Call 01625 000 000
+                Call 07307 353 951
               </a>
             </div>
           </AnimatedDiv>

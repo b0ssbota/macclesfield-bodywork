@@ -101,8 +101,8 @@ export default function CookiePolicy() {
               <h2 className="text-xl font-semibold text-gray-900 mb-3">Contact Us</h2>
               <p>
                 If you have any questions about our use of cookies, please contact us at{' '}
-                <a href="mailto:info@macclesfieldbodywork.co.uk" className="text-electric hover:underline">
-                  info@macclesfieldbodywork.co.uk
+                <a href="mailto:cars@maccgarage.com" className="text-electric hover:underline">
+                  cars@maccgarage.com
                 </a>.
               </p>
             </div>

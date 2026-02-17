@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import CookiePolicy from './pages/CookiePolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ServicePage from './pages/services/ServicePage';
+import Welding from './pages/services/Welding';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/services/welding" element={<Welding />} />
         <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
     </Layout>
