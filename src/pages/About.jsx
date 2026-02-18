@@ -117,11 +117,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedDiv>
-              <div className="aspect-[4/3] bg-gradient-to-br from-cyan/10 to-purple/10 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <Wrench size={48} className="text-electric/30 mx-auto mb-3" />
-                  <p className="text-gray-400 text-sm">Workshop Image</p>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <img src="/images/bmw-prep.jpeg" alt="Macclesfield Body Work workshop" className="w-full h-full object-cover" />
               </div>
             </AnimatedDiv>
             <AnimatedDiv delay={200}>
