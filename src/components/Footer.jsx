@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
+              <img src="/images/logo.png" alt="Macclesfield Body Work" className="h-12 w-auto brightness-0 invert" />
               <div className="leading-tight">
                 <span className="font-bold text-white text-lg block">Macclesfield</span>
                 <span className="text-sm gradient-text font-semibold">Body Work</span>
